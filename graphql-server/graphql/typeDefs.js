@@ -2,6 +2,7 @@ const typeDefs = `#graphql
     type Prompt {
         id: ID!
         chatId: String!
+        prompt: String!
         response: String!
         createdAt: String!
         chatTitle: String!
@@ -16,6 +17,7 @@ const typeDefs = `#graphql
     type Mutation {
         addPrompt(
             chatId: String!
+            prompt: String!
             response: String!
             createdAt: String!
             chatTitle: String!

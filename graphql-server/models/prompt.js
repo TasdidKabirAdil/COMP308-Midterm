@@ -6,8 +6,8 @@ const PromptSchema = new mongoose.Schema({
     response: String,
     createdAt: String,
     chatTitle: String,
-    upVotes: Number,
-    downVotes: Number
+    upVotes: { type: Number, default: 0 },
+    downVotes: { type: Number, default: 0 } 
 })
 
 const Prompt = mongoose.model('Prompt', PromptSchema)
